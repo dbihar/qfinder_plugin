@@ -1,0 +1,50 @@
+{
+  "name": "zazu-github",
+  "version": "1.2.0",
+  "description": "Zazu plugin to search for GitHub repositories with github.com",
+  "main": "src/index.js",
+  "private": true,
+  "scripts": {
+    "lint": "standard --verbose | snazzy",
+    "test": "npm run lint && npm run test:unit",
+    "test:unit": "jest",
+    "prepush": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielbayerlein/zazu-github.git"
+  },
+  "keywords": [
+    "zazu",
+    "github"
+  ],
+  "author": "Daniel Bayerlein",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danielbayerlein/zazu-github/issues"
+  },
+  "homepage": "https://github.com/danielbayerlein/zazu-github#readme",
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "jest": "^21.2.1",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.3"
+  },
+  "dependencies": {
+    "cache-conf": "^0.6.0",
+    "got": "^8.0.1",
+    "node-emoji": "^1.8.1"
+  },
+  "jest": {
+    "bail": true,
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/src/*.js"
+    ]
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  }
+}
